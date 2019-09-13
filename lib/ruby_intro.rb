@@ -38,11 +38,25 @@ end
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  greeting = "Hello, "
+  fullGreeting = greeting + name
+  return fullGreeting
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  lower = s.downcase
+  letters = lower.split
+  letter = letters[0]
+  
+  if letter < 'a' or letter > 'z'
+    return false
+  end
+  
+  if letter == 'a' or letter == 'e' or letter == 'i' or letter == 'o' or letter == 'u'
+    return false
+  end
+   
+  return true
 end
 
 def binary_multiple_of_4? s
