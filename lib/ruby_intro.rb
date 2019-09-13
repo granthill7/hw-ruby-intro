@@ -10,11 +10,29 @@ def sum arr
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  large1 = -1/0
+  large2 = -1/0
+  for i in arr
+    if arr[i] >= large1
+      large2 = large1
+      large1 = arr[i]
+    elsif arr[i] > large2
+      large2 = arr[i]
+    end
+  end
+  
+  return large1 + large2
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  for i in arr
+    for j in arr
+      sum = arr[i] + arr[j]
+      if i != j and sum == n
+        return true
+      end
+    end
+  end
 end
 
 # Part 2
