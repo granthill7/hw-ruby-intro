@@ -78,7 +78,6 @@ end
 
 def binary_multiple_of_4? s
   charArray = s.split("")
-  print charArray
   
   charArray.each do |digit|
     if (digit != "0") and (digit != "1")
